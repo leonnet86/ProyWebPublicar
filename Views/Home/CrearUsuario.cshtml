@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Crear Usuario";
+}
+
+<link href="~/assets/css/jquery-ui.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <h2>Registrar Usuario</h2>
+        </div>
+        <div class="form-group col-md-8">
+                <label for="exampleInputEmail">Email</label>
+                <input type="email" maxlength="50" class="obligatorio borrar form-control" onkeyup="EmailMaestro()" id="txt_email" aria-describedby="emailHelp" placeholder="Ingrese email">
+                <small id="emailHelp"></small>
+        </div>
+        <div class="form-group col-md-8">
+            <label for="exampleInputContraseña">Contraseña</label>
+            <input type="password" maxlength="20" class="obligatorio borrar form-control" id="txt_contraseña" placeholder="Contraseña">
+        </div>
+        <div class="form-group col-md-8">
+            <label for="exampleInputNombres">Nombres</label>
+            <input type="text" maxlength="30" class="obligatorio borrar form-control" id="txt_nombres" onkeypress="return sololetras(event)" placeholder="Nombres">
+        </div>
+        <div class="form-group col-md-8">
+            <label for="exampleInputApellido">Apellido</label>
+            <input type="text" maxlength="30" class="obligatorio borrar form-control" id="txt_apellido" onkeypress="return sololetras(event)" placeholder="Apellido">
+        </div>
+
+        <div class="col-sm-5">
+            <label>Sexo</label>
+            <select id="idTipoSexo" class="obligatorio borrar form-control"></select>
+        </div>
+
+        <div class="col-md-8">
+            <label class="mt-2">Fecha Nacimiento</label>
+            <input id="dpNacimiento" type="text" maxlength="10" readonly class="obligatorio borrar form-control" />
+        </div>
+        @*<div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>*@
+        <div class="col-md-12">
+            <div class="mt-2">
+                <label>Ingrese Foto</label>
+            </div>
+            <div>
+                <img id="imgFoto" width="150" height="100" style="border:1px">
+            </div>
+            <div class="mt-2">
+                <input type="file" id="btnFoto" />
+            </div>
+        </div>
+
+        <div class="col-md-8 mt-3">
+            <button onclick="GuardarDatos()" type="button" class="btn btn-primary">Registrar</button>
+            <button onclick="Salir()" type="button" class="btn btn-secondary">Cancelar</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/assets/js/Jquery.min.js"></script>
+<script src="~/assets/js/jquery-ui.min.js"></script>
+<script src="~/assets/js/UtilValores.js"></script>

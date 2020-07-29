@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/signin.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+    <form class="form-signin">
+        <img class="mb-4" src="~/Imagen/bee.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Inicie Sesion</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        @*<div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>*@
+        <div class="mb-3">
+            @Html.ActionLink("Registrarse", "CrearUsuario", "Home")
+        </div>
+     
+
+        <button type="button" class="btn btn-lg btn-primary btn-block" id="btn_ingresar">Ingresar</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Derechos Reservados - 2019</p>
+    </form>
+
+    <script src="~/assets/js/Jquery.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/Login.js"></script>
+</body>
+</html>

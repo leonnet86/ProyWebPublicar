@@ -1,0 +1,34 @@
+﻿
+
+/*@media screen and (max-width: 456px){
+.contenido_logo{
+font-size:20px;
+}
+
+}*/
+
+
+.contenido_logo:before{
+  content: "JC COMUNICACIONES";
+}
+
+/*@media (max-width:900px) and (min-width:450px) {
+    #contenido_logo:before {
+        content: "Asoc. Autónoma Automovilismo";
+    }
+}*/
+
+@media (max-width:456px){
+    .contenido_logo:before {
+        content: "JC";
+        font-size:80px;
+    }
+}
+
+@media (min-width:995px) and (max-width:1199px) {
+    .contenido_logo:before {
+        content: "JC COMUNICACIONES";
+        font-size:30px;
+    }
+}
+

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="empresa" Class="BaseDatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-O0DBJAQ\SQLEXPRESS;Initial Catalog=empresa;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="empresaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.t_cobertura" Member="t_cobertura">
+    <Type Name="t_cobertura">
+      <Column Name="id_cobertura" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cobertura" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_planes_internet" Member="t_planes_internet">
+    <Type Name="t_planes_internet">
+      <Column Name="id_planes_internet" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="plan_internet" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mensualidad" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="velocidad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="capacidad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tipo_plan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_tipo_plan" Member="t_tipo_plan">
+    <Type Name="t_tipo_plan">
+      <Column Name="id_tipo_plan" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tipo_plan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_usuario" Member="t_usuario">
+    <Type Name="t_usuario">
+      <Column Name="idusuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="contraseña" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="fecha_registro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HABILITADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_imagen_maestro" Member="tb_imagen_maestro">
+    <Type Name="tb_imagen_maestro">
+      <Column Name="idimagen_maestro" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre_imagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cabezera_foto" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="foto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fecha_registro" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
